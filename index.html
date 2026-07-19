@@ -13,8 +13,8 @@
         <nav class="navbar">
             <div class="container">
                 <a href="#" class="logo"><img src="images/logo.png" alt="">AfriConnectSummit</a>
-                <div>
-                    <ul>
+                <div class="nav-right">
+                    <ul class="nav-link">
                         <li><a href="index.html" class="action">Accueil</a></li>
                         <li><a href="intervenants.html">Intervenants</a></li>
                         <li><a href="programme.html">Programme</a></li>
@@ -90,58 +90,60 @@
         </div>
     </section>
 
-    <section>
+    <section class="stats">
         <div class="container">
-            <h2>Summit en chiffres </h2>
-            <div>
-                <div>
-                    <div>
+            <h2 id="stats-title">Summit en chiffres </h2>
+            <div class="stats-grid">
+                <div class="stats-card">
+                    <div class="stats-num">
                         <span>+</span> <span>0</span>
                     </div>
-                    <p>Participants attendus</p>
+                    <p class="stats-label">Participants attendus</p>
                 </div>
-                <div>
-                    <div>
+                <div class="stats-card">
+                    <div class="stats-num">
                         <span>0</span>
                     </div>
-                    <p>intervenants confirmés</p>
+                    <p class="stats-label">intervenants confirmés</p>
                 </div>
-                <div>
-                    <div>
+                <div class="stats-card">
+                    <div class="stats-num">
                         <span>0</span>
                     </div>
-                    <p>jours de sommet</p>
+                    <p class="stats-label">jours de sommet</p>
                 </div>
-                <div>
-                    <div>
+                <div class="stats-card">
+                    <div class="stats-num">
                         <span>0</span>
                     </div>
-                    <p>Pays représentés</p>
+                    <p class="stats-label">Pays représentés</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
+    <section id="pourquoi">
         <div class="container">
-            <div>
-                <p>Pourquoi venir ? </p>
-                <h2>Un sommet pour pensé pour créer des occasions réelles</h2>
+            <div class="section-head">
+                <p class="eyebrow">Pourquoi venir ? </p>
+                <h2 class="pourquoi1-title">Un sommet pour pensé pour créer des occasions réelles</h2>
             </div>
             <div>
                 <!-- premier argument -->
-                <div>
-                    <div>
-                        <i class="bi bi-diagram-3"></i>
-                    </div>
+                <div class="pourquoi1">
+                    <div class="pourquoi1-card">
+                        <div class="pourquoi1-icon">
+                            <i class="bi bi-diagram-3"></i>
+                        </div>
+                    
 
                     <h3>Rencontrer qualifiés</h3>
                     <p>Des session de mise en relation ciblées entre fondateurs, investisseurs et recruteurs tech ,
                         organisées par secteur d'activité.</p>
                 </div>
                 <!-- deuxième argument -->
-                <div>
-                    <div>
+                <div class="pourquoi1-card">
+                    <div class="pourquoi1-icon">
                         <i class="bi bi-lightbulb-fill"></i>
                     </div>
 
@@ -150,8 +152,8 @@
                         fintech et la scalabilité produit en Afrique.</p>
                 </div>
                 <!-- troisième argument -->
-                <div>
-                    <div>
+                <div class="pourquoi1-card">
+                    <div class="pourquoi1-icon">
                         <i class="bi bi-rocket-takeoff-fill"></i>
                     </div>
 
@@ -160,118 +162,128 @@
                         actifs sur le continent.</p>
                 </div>
             </div>
+        </div>
     </section>
     <!-- INTERVENANTS VEDETTES -->
-    <section>
+    <section id="inter">
         <div class="container">
-            <div>
-                <p>Il viendront à Kigali </p>
+            <div class="section-head">
+                <p class="eyebrow">Il viendront à Kigali </p>
                 <h2>Intervenants vedettes</h2>
             </div>
-            <div>
+            <div class="inter-grid">
                 <!-- premier intervenant -->
-                <div>
-                    <div>
-                        <img src="images/amy.jpg" alt="Amy Sylla">
+                <div class="inter-card">
+                    <div class="inter-photo ">
+                        <img src="images/amy.jpg" alt="Amy Sylla"  class="I">
                     </div>
-                    <div>
+                    <div class="inter-body">
                         <h3>Amy Sylla</h3>
-                        <p>Fondateur , SolarStack</p>
-                        <p><i class="bi bi-geo-alt"></i> Ghana.</p>
+                        <p class="inter-role">Fondateur , SolarStack</p>
+                        <p class="inter-country"><i class="bi bi-geo-alt"></i> Ghana.</p>
                     </div>
                 </div>
-                <div></div>
+               
                 <!-- deuxième intervenant -->
-                <div>
-                    <div>
-                        <img src="images/astou.jpg" alt="Astou Ndao">
+                <div class="inter-card">
+                    <div class="inter-photo ">
+                        <img src="images/astou.jpg" alt="Astou Ndao"  class="I">
                     </div>
-                    <div>
+                    <div class="inter-body">
                         <h3>Astou Ndao</h3>
-                        <p>VP Data ,Djamo</p>
-                        <p><i class="bi bi-geo-alt"></i> Maroc.</p>
+                        <p class="inter-role">VP Data ,Djamo</p>
+                        <p class="inter-country"><i class="bi bi-geo-alt"></i> Maroc.</p>
                     </div>
                 </div>
                 <!-- troisième intervenant -->
-                <div>
-                    <div>
-                        <img src="images/modou.jpg" alt="">
+                <div class="inter-card">
+                    <div class="inter-photo">
+                        <img src="images/modou.jpg" alt="" class="I">
                     </div>
-                    <div>
+                    <div class="inter-body">
                         <h3>Modou Sene</h3>
-                        <p>Associé, Savannah Capital</p>
-                        <p><i class="bi bi-geo-alt"></i> Kanya.</p>
+                        <p class="inter-role">Associé, Savannah Capital</p>
+                        <p class="inter-country"><i class="bi bi-geo-alt"></i> Kanya.</p>
                     </div>
                 </div>
                 <!-- quatrième intervenant -->
-                <div>
-                    <div>
-                        <img src="images/alioune.jpg" alt="">
+                <div class="inter-card">
+                    <div class="inter-photo ">
+                        <img src="images/alioune.jpg" alt="" class="I">
                     </div>
-                    <div>
+                    <div class="inter-body">
                         <h3>Alioune Sylla </h3>
-                        <p>CTO, PayZen</p>
-                        <p><i class="bi bi-geo-alt"></i> Sénégal.</p>
+                        <p class="inter-role">CTO, PayZen</p>
+                        <p class="inter-country"><i class="bi bi-geo-alt"></i> Sénégal.</p>
                     </div>
                 </div>
             </div>
-            <div>
-                <a href="intervenants.html">Voir tous les intervenants <i class="bi bi-arrow-right"></i></a>
+            <div class="inter-cta">
+                <a href="intervenants.html" class="btn btn-primary">Voir tous les intervenants <i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
     </section>
 
     <!-- SPONSORS -->
-    <section class="container">
-        <div>
-            <div>
-                <p>Ils rendre l événement possible </p>
+    <section id="sponsors">
+        <div class="container">
+            <div class="section-head">
+                <p class="eyebrow">Ils rendre l événement possible </p>
                 <h2>Nos partenaires</h2>
             </div>
             <!-- premier partenaire -->
-            <div>
+            <div class="sponsors-tier ">
                 <h3>Partenaire Or</h3>
-                <div>
-                    <span>Baobab Ventures </span>
-                    <span>Sahel Telecom</span>
+                <div class="sponsors-row">
+                    <span class="sponsors-chip">Baobab Ventures </span>
+                    <span class="sponsors-chip">Sahel Telecom</span>
+                    <span class="sponsors-chip">AfriLink Systems</span>
+                    <span class="sponsors-chip">Dakar Tech venture</span>
+                    <span class="sponsors-chip">Savanna connect</span>
                 </div>
             </div>
             <!-- deuxième partenaire -->
-            <div>
+            <div class="sponsors-tier tier-argent">
                 <h3>Partenaire Argent</h3>
-                <div>
-                    <span>Kigali Cloud </span>
-                    <span>Teranga Bank</span>
+                <div class="sponsors-row">
+                    <span class="sponsors-chip"><i class="bi bi-buildings-fill"></i>Kigali Cloud </span>
+                    <span class="sponsors-chip">Teranga Bank</span>
+                    <span class="sponsors-chip">Senegal Digital</span>
+                    <span class="sponsors-chip">Osais pay</span>
+                    <span class="sponsors-chip">Atlas cloud</span>
                 </div>
             </div>
             <!-- troisième partenaire -->
-            <div>
+            <div class="sponsors-tier tier-bronze">
                 <h3>Partenaire Bronze</h3>
-                <div>
-                    <span>Cowrie Pay </span>
-                    <span>SolarStack</span>
-                    <span>PayZen</span>
-                    <span>Nile Data </span>
+                <div class="sponsors-row">
+                    <span class="sponsors-chip">Cowrie Pay </span>
+                    <span class="sponsors-chip">SolarStack</span>
+                    <span class="sponsors-chip">PayZen</span>
+                    <span class="sponsors-chip">Nile Data </span>
+                    <span class="sponsors-chip">Sahel Data Labs</span>
+                    <span class="sponsors-chip">Baobab Code</span>
+                    <span class="sponsors-chip">Teranga Cyber</span>
                 </div>
             </div>
 
         </div>
     </section>
 
-    <footer>
+    <footer class="site-footer">
         <div class="container">
-            <div>
-                <div>
-                    <a href="#"><img src="images/logo.png" alt="">AfriConnectSummit</a>
-                    <p>le sommet tech pan-africain kigali Convention centre , Rwanda</p>
-                    <div>
+            <div class="footer-cols">
+                <div class="footer-col">
+                    <a href="#" class="logo"><img src="images/logo.png" alt="">AfriConnectSummit</a>
+                    <p class="footer-tagline">le sommet tech pan-africain kigali Convention centre , Rwanda</p>
+                    <div class="footer-social">
                         <a href="#"><i class="bi bi-instagram"></i></a>
                         <a href="#"><i class="bi bi-facebook"></i></a>
                         <a href="#"><i class="bi bi-twitter"></i></a>
                         <a href="#"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
-                <div>
+                <div class="footer-col">
                     <h3>Navigation</h3>
                     <ul>
                         <li><a href="index.html">Accueil</a></li>
@@ -280,7 +292,7 @@
                         <li><a href="contact.html">Contact & Inscription</a></li>
                     </ul>
                 </div>
-                <div>
+                <div class="footer-col">
                     <h3>Contact</h3>
                     <ul>
                         <li> <i class="bi bi-envelope-at-fill"></i> <a
