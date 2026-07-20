@@ -46,15 +46,15 @@
         <div class="container">
             <h2>Liste des intervenants</h2>
             <div class="filters">
-                <button class="filter-btn active">Tout</button>
-                <button class="filter-btn">IA & Tech</button>
-                <button class="filter-btn">Business</button>
-                <button class="filter-btn">Design</button>
-                <button class="filter-btn">Data</button>
+                <button class="filter-btn active"  data-filter="tous">Tout</button>
+                <button class="filter-btn" data-filter="IA">IA & Tech </button>
+                <button class="filter-btn" data-filter="business">Business</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="data">Data</button>
             </div>
             <div class="inter-grid-full">
                 <!-- premier intervenant -->
-                <div class="inter-card">
+                <div class="inter-card" data-speaker-topic="IA">
                     <div class="inter-photo"><img src="images/amara.jpg" alt="Amara Gueye" class="I" >
                     </div>
                     <div  class="inter-body">
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <!--deuxieme intervenant  -->
-                <div class="inter-card">
+                <div class="inter-card" data-speaker-topic="business">
                     <div class="inter-photo">
                         <img src="images/amy.jpg" alt="Amy Sylla"  class="I" >
                     </div>
@@ -79,7 +79,7 @@
 
                 </div>
                 <!-- troisieme intervenants -->
-                <div class="inter-card">
+                <div class="inter-card" data-speaker-topic="data">
                     <div class="inter-photo">
                         <img src="images/astou.jpg" alt="Astou Ndao"  class="I" >
                     </div>
@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <!-- 4 intervenants -->
-                <div class="inter-card">
+                <div class="inter-card" data-speaker-topic="business">
                     <div class="inter-photo">
                         <img src="images/modou.jpg" alt="Modou Sene" class="I" >
                      </div>
@@ -103,7 +103,7 @@
                     </div>
                 </div>
                 <!-- 5 intervenents -->
-                <div class="inter-card">
+                <div class="inter-card" data-speaker-topic="design">
                     <div class="inter-photo">
                         <img src="images/aicha.jpg" alt="Aicha Traoré"  class="I"  >
                    </div>
@@ -115,7 +115,7 @@
                     </div>
                 </div>
                 <!-- 6 intervatenant -->
-                <div class="inter-card">
+                <div class="inter-card" data-speaker-topic="IA">
                     <div class="inter-photo">
                         <img src="images/ousmane.jpg" alt="Ousmane Dia"  class="I" >
                     </div>
@@ -127,7 +127,7 @@
                     </div>
                 </div>
                 <!-- 7 intervenants -->
-                <div class="inter-card">
+                <div class="inter-card" data-speaker-topic="data">
                     <div class="inter-photo">
                         <img src="images/khoudia.jpg" alt="Khoudia Sylla" class="I">  
                     </div>
@@ -139,7 +139,7 @@
                     </div>
                 </div>
                 <!-- 8 intervenants  -->
-                <div class="inter-card">
+                <div class="inter-card" data-speaker-topic="design">
                     <div class="inter-photo">
                         <img src="images/moussa.jpg" alt="Moussa Diop"  class="I" >
                     </div>
@@ -151,7 +151,7 @@
                     </div>
                 </div>
                 <!-- 9 intervenants -->
-                <div class="inter-card">
+                <div class="inter-card" data-speaker-topic="IA">
                     <div class="inter-photo">
                         <img src="images/yasmine.jpg" alt="Yasmine Ndiaye"  class="I">
                     </div>

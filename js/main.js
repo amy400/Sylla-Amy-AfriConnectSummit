@@ -142,42 +142,127 @@ function initCounters() {
 }
 initCounters();
 
-function initscrollReveal () {
+function initscrollReveal() {
   const items = document.querySelectorAll(".reveal");
-  if(!items.length) return ;
+  if (!items.length) return;
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) =>{
-        if(entry.isIntersecting){
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
           entry.target.classList.add("is-visible");
           observer.unobserve(entry.target);
         }
       });
     },
-    {threshold: 0.15, rootMargin:"0px 0px -60px 0px"}
+    { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
   );
   items.forEach((item) => observer.observe(item));
 
 }
-initscrollReveal ();
+initscrollReveal();
 
 const tabs = document.querySelectorAll(".tab-btn");
 const panels = document.querySelectorAll(".tab-panel");
 
 tabs.forEach(tab => {
-    tab.addEventListener("click", () => {
+  tab.addEventListener("click", () => {
 
-        // Retirer active de tous les boutons
-        tabs.forEach(btn => btn.classList.remove("active"));
+    // Retirer active de tous les boutons
+    tabs.forEach(btn => btn.classList.remove("active"));
 
-        // Retirer active de tous les tableaux
-        panels.forEach(panel => panel.classList.remove("active"));
+    // Retirer active de tous les tableaux
+    panels.forEach(panel => panel.classList.remove("active"));
 
-        // Ajouter active au bouton cliqué
-        tab.classList.add("active");
+    // Ajouter active au bouton cliqué
+    tab.classList.add("active");
 
-        // Ajouter active au tableau correspondant
-        const target = document.getElementById(tab.dataset.tabTarget);
-        target.classList.add("active");
-    });
+    // Ajouter active au tableau correspondant
+    const target = document.getElementById(tab.dataset.tabTarget);
+    target.classList.add("active");
+  });
 });
+// Flitre 
+
+function iniInterFilters() {
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll("[data-speaker-topic]");
+  if (!filterButtons.length) return;
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const topic = btn.getAttribute("data-filter");
+      filterButtons.forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      cards.forEach((card) => {
+        const matches = topic === "tous" || card.getAttribute("data-speaker-topic") === topic;
+        card.classList.toggle("hidden-card", !matches)
+      });
+    });
+  });
+}
+iniInterFilters();
+// validation
+function initFormValidation() {
+  const form = document.querySelector("#registration-form");
+  if (!form) return;
+  const successBox = document.querySelector(".form-success");
+  const validators = {
+    nom: (v) => v.trim().length >= 3 || "Merci d indiquer votre nom complet (3 caractère minimun).",
+    email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || "Merci d'indiquer une adresse e-mail valide.",
+    phone: (v) => v.replace(/\D/g, "").length >= 9 || "Le numéro doit contenir au moins 9 chiffres.",
+    participation: (v) => v !== "" || "Merci de choisir un type de participation.",
+   pays: (v) => v !== "" || "Merci de choisir votre pays.",
+    message: (v) => v.trim().length >= 20 || "Votre message doit contenir au moins 20 caractères.",
+  };
+  function showFieldState(field, ok, message) {
+    const group = field.closest(".form-group");
+    const errorEl = group.querySelector(".field-error");
+    group.classList.toggle("error", !ok);
+    group.classList.toggle("valid", ok);
+    if (errorEl) errorEl.textContent = ok ? "" : message;
+  }
+  function validateField(field) {
+    const validator = validators[field.name];
+   if (!validator) return true ;
+    const result = validator(field.value);
+    const ok = result === true;
+    showFieldState(field, ok,ok ? "" : result);
+    return ok ;
+  }
+Object.keys(validators).forEach((name) =>{
+  const field = form.elements.namedItem(name);
+  if(field) {
+    field.addEventListener("blur", () => validateField(field));
+    field.addEventListener("input", () => {
+      if(field.closest(".form-group").classList.contains("error"))
+        validateField(field);
+    });
+  }
+});
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let allValid = true;
+
+    Object.keys(validators).forEach((name) => {
+      const field = form.elements.namedItem(name);
+      if (field && !validateField(field)) allValid = false;
+    });
+
+    if (!allValid) {
+      const firstError = form.querySelector(".form-group.error input, .form-group.error select, .form-group.error textarea");
+      if (firstError) firstError.focus();
+      return;
+    }
+
+    // Succès : message visuel + réinitialisation
+    if (successBox) {
+      successBox.classList.add("show");
+      successBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+    form.reset();
+    form.querySelectorAll(".form-group").forEach((g) => g.classList.remove("valid", "error"));
+
+    setTimeout(() => successBox && successBox.classList.remove("show"), 6000);
+  });
+}
+initFormValidation();

@@ -52,7 +52,7 @@
                     <i class="bi bi-check-circle-fill"></i>
                     <span>Merci ! Votre inscription a bien été envoyée. Un e-mail de confirmation va suivre.</span>
                 </div>
-                <form action="">
+                <form action="" id="registration-form">
                     <div class="form-row">
                         <div class="form-group full">
                             <label for="nom">Nom complet</label>
@@ -69,7 +69,7 @@
 
                         <div class="form-group">
                             <label for="telephone">Téléphone</label>
-                            <input type="tel" name="telephone" id="telephone"
+                            <input type="tel" name="phone" id="telephone"
                                 placeholder="Entrez votre numéro de téléphone">
                             <span class="field-error"></span>
                         </div>
@@ -77,7 +77,7 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="pays">type de participation </label>
-                            <select name="" id="">
+                            <select name="participation" id="">
                                 <option value="">choisissez une option</option>
                                 <option value="visiteur">visiteur</option>
                                 <option value="exposant">exposant</option>
@@ -146,8 +146,8 @@
             </div>
             <div class="faq-list reveal">
                 <div class="faq-item">
-                    <input type="text" class="faq-check">
-                    <label for="" class="faq-trigger"> <span> Le billet inclut -il l'hébergement ?</span> <i
+                    <input type="checkbox" class="faq-check" id="feq1">
+                    <label for="feq1" class="faq-trigger"> <span> Le billet inclut -il l'hébergement ?</span> <i
                             class="bi bi-chevron-compact-down chev"></i></label>
                     <div class="faq-body-wrap">
                         <div class="faq-body">
@@ -158,8 +158,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <input type="text" class="faq-check">
-                    <label for="" class="faq-trigger"> <span> Ai-je besoin d'un visa pour participer à l'événement ?</span> <i
+                    <input type="checkbox" class="faq-check" id="feq2">
+                    <label for="feq2" class="faq-trigger"> <span> Ai-je besoin d'un visa pour participer à l'événement ?</span> <i
                             class="bi bi-chevron-compact-down chev"></i></label>
                     <div class="faq-body-wrap">
                         <div class="faq-body">
@@ -169,8 +169,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <input type="text" class="faq-check">
-                    <label for="" class="faq-trigger">les sessions sont-elles traduites en français ? <i
+                    <input type="checkbox" class="faq-check" id="feq3">
+                    <label for="feq3" class="faq-trigger">les sessions sont-elles traduites en français ? <i
                             class="bi bi-chevron-compact-down chev"></i></label>
                     <div class="faq-body-wrap">
                         <div class="faq-body">
@@ -180,8 +180,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <input type="text" class="faq-check">
-                    <label for="" class="faq-trigger"> <span> Ai-je besoin d'un visa pour participer à l'événement ?</span> <i
+                    <input type="checkbox" class="faq-check" id="feq4">
+                    <label for="feq4" class="faq-trigger"> <span> Ai-je besoin d'un visa pour participer à l'événement ?</span> <i
                             class="bi bi-chevron-compact-down chev"></i></label>
                     <div class="faq-body-wrap">
                         <div class="faq-body">
@@ -191,8 +191,8 @@
                     </div>
                 </div>
                 <div class="faq-item">
-                    <input type="text" class="faq-check">
-                    <label for="" class="faq-trigger"> <span> Puis-j annuler ou modifier mon inscription ?</span> <i
+                    <input type="checkbox" class="faq-check" id="feq5">
+                    <label for="feq5" class="faq-trigger"> <span> Puis-j annuler ou modifier mon inscription ?</span> <i
                             class="bi bi-chevron-compact-down chev"></i></label>
                     <div class="faq-body-wrap">
                         <div class="faq-body">
@@ -213,7 +213,7 @@
                 <p class="eyebrow">Nous trouver</p>
                 <h2>Kigali Convention Centre</h2>
             </div>
-            <div reveal reveal-up>
+            <div class="reveal reveal-up" >
 
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255201.3982834241!2d30.061885078741508!3d-1.944072675905983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411d0bc8!2sKigali%2C%20Rwanda!5e0!3m2!1sfr!2ssn!4v1783985681547!5m2!1sfr!2ssn"
