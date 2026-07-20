@@ -17,7 +17,7 @@
                 <ul  class="nav-link">
                     <li><a href="index.html">Accueil</a></li>
                     <li><a href="intervenants.html">Intervenants</a></li>
-                    <li><a href="programme.html">Programme</a></li>
+                    <li><a href="programme.html" class="active">Programme</a></li>
                     <li><a href="contact.html">Contact & Inscription</a></li>
                 </ul>
                 <div class="nav-tools">
@@ -44,20 +44,20 @@
         </div>
     </section>
     <!-- ONGLETS 3 JOURS -->
-    <section>
+    <section aria-labelledby="schedule-title">
         <div class="container">
-            <div class="section-head">
+            <div class="section-head reveal">
                 <p class="eyebrow">Planning détaillé </p>
                 <h2>Programme jour par jour</h2>
             </div>
-            <div class="tabs">
-                <button class="tab-btn">Jour 1 .Fondations</button>
-                <button class="tab-btn" >Jour 2 .croissance</button>
-                <button class="tab-btn">Jour 3 . Passage à l'échelle</button>
+            <div class="tabs raveal">
+                <button class="tab-btn active"  data-tab-target="jour1" aria-selected="true">Jour 1 .Fondations</button>
+                <button class="tab-btn"  data-tab-target="jour2" aria-selected="false">Jour 2 .croissance</button>
+                <button class="tab-btn" data-tab-target="jour3"  aria-selected="false">Jour 3 . Passage à l'échelle</button>
 
             </div>
             <!-- JOUR1 -->
-            <div class="tab-panel active">
+            <div class="tab-panel active " id="jour1">
                 <div class="table-scroll">
                     <table class="schedule-table">
                         <caption >12 decembre 2026- Fondation</caption>
@@ -112,7 +112,7 @@
                 </div>
             </div>
             <!--  JOUR-->
-            <div class="tab-panel active">
+            <div class="tab-panel " id="jour2">
                 <div class="table-scroll">
                     <table class="schedule-table">
                         <caption>14 decembre 2026- Passage à l' échelle</caption>
@@ -167,7 +167,7 @@
                 </div>
             </div>
             <!-- 3jour -->
-            <div class="tab-panel active">
+            <div class="tab-panel " id="jour3">
                 <div class="table-scroll">
                     <table class="schedule-table">
                         <caption>14 decembre 2026- Passage à l' échelle</caption>
@@ -227,14 +227,14 @@
     <!-- SECTION THÉMATIQUES -->
     <section >
         <div class="container">
-            <div class="section-head">
+            <div class="section-head reveal reveal-up">
                 <p class="eyebrow">4 fils rouges</p>
                 <h2>Thématiques du sommet</h2>
             </div>
             <div class="themes-grid">
             <!-- premiere thematique -->
             
-                <div class="themes-card">
+                <div class="themes-card reveal reveal-up">
                 <div class="themes-icon" >
                     <i class="bi bi-graph-up-arrow" ></i>
                 </div>
@@ -244,7 +244,7 @@
                 </div>
             </div>
             <!-- deuxieme thematique -->
-            <div class="themes-card">
+            <div class="themes-card reveal reveal-up">
                 <div class="themes-icon">
                     <i class="bi bi-files-alt"></i>
                 </div>
@@ -254,7 +254,7 @@
                 </div>
             </div>
             <!-- troisieme thematique -->
-            <div class="themes-card">
+            <div class="themes-card reveal reveal-up">
                 <div class="themes-icon">
                     <i class="bi bi-sun"></i>
                 </div>
@@ -265,7 +265,7 @@
                 </div>
             </div>
             <!-- quatrieme thematique -->
-            <div class="themes-card">
+            <div class="themes-card reveal reveal-up">
                 <div class="themes-icon">
                     <i class="bi bi-palette"></i>
                 </div>
@@ -309,13 +309,13 @@
                     </ul>
                 </div>
             </div>
-            <div>
-                <p> </p>
+            <div class="copyright">
+                <p id="copyright"> </p>
             </div>
         </div>
     </footer>
 
-    <button><i></i></button>
+    <button class="back-to-top" id="backtotop"><i class="bi bi-arrow-up"></i></button>
     <script src="js/main.js"></script>
 </body>
 

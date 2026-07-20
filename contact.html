@@ -14,12 +14,12 @@
             <div class="container">
                 <a href="#" class="logo"><img src="images/logo.png" alt="">AfriConnectSummit</a>
                 <div>
-                    <ul >
+                    <ul class="nav-link" >
                         <li><a href="index.html">Accueil</a></li>
                         <li><a href="intervenants.html">Intervenants</a></li>
                         <li><a href="programme.html">Programme</a></li>
-                        <li><a href="contact.html">Contact & Inscription</a></li>
-                    </ul>
+                        <li><a href="contact.html" class="active">Contact & Inscription</a></li>
+                    </ul >
                     <div class="nav-tools">
                         <button class="theme-toggle">
                             <i class="bi bi-sun"></i>
@@ -140,11 +140,11 @@
     <!-- FAQ EN ACCORDÉON CSS PUR -->
     <section class="faq">
         <div class="container">
-            <div class="section-head">
+            <div class="section-head reveal reveal-up">
                 <p class="eyebrow">Questions fréquentes ?</p>
                 <h2>Tout ce qu'il faut savoir</h2>
             </div>
-            <div class="faq-list">
+            <div class="faq-list reveal">
                 <div class="faq-item">
                     <input type="text" class="faq-check">
                     <label for="" class="faq-trigger"> <span> Le billet inclut -il l'hébergement ?</span> <i
@@ -209,11 +209,11 @@
     <!-- CARTE GOOGLE MAP -->
     <section>
         <div class="container">
-            <div class="section-head">
+            <div class="section-head reveal reveal">
                 <p class="eyebrow">Nous trouver</p>
                 <h2>Kigali Convention Centre</h2>
             </div>
-            <div>
+            <div reveal reveal-up>
 
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d255201.3982834241!2d30.061885078741508!3d-1.944072675905983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19dca4258ed8e797%3A0xf32b36a5411d0bc8!2sKigali%2C%20Rwanda!5e0!3m2!1sfr!2ssn!4v1783985681547!5m2!1sfr!2ssn"
@@ -256,13 +256,13 @@
                     </ul>
                 </div>
             </div>
-            <div>
-                <p> </p>
+            <div class="copyright">
+                <p id="copyright"> </p>
             </div>
         </div>
     </footer>
 
-    <button><i></i></button>
+    <button class="back-to-top" id="backtotop"><i class="bi bi-arrow-up"></i></button>
     <script src="js/main.js"></script>
 </body>
 
