@@ -1,3 +1,4 @@
+// dark mode 
 const toggle = document.querySelector('.theme-toggle');
 const savedTheme = localStorage.getItem('theme');
 
@@ -17,7 +18,7 @@ toggle.addEventListener('click', () => {
     localStorage.setItem('theme', 'light');
   }
 });
-
+// navbar ombre au scroll + menu hamburger(nabar-toggoler) mobile
 function initNavnar() {
   const navbar = document.querySelector(".navbar");
   const navbarToggoler = document.querySelector(" .navbar-toggoler");
@@ -71,6 +72,7 @@ backToTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+// compte à rebours temps réel - jusqu'a la date fictive de la conférence
 
 function initCount() {
   const el = document.querySelector("[data-count]");
@@ -106,6 +108,7 @@ function initCount() {
 
 }
 initCount();
+// compteurs animé - chiffres clés qui s'incrémentent au scroll
 
 function initCounters() {
   const counters = document.querySelectorAll("[data-count-to]");
@@ -141,7 +144,7 @@ function initCounters() {
   counters.forEach((c) => observer.observe(c));
 }
 initCounters();
-
+// animations au scroll - intersectionobserver
 function initscrollReveal() {
   const items = document.querySelectorAll(".reveal");
   if (!items.length) return;
@@ -161,6 +164,7 @@ function initscrollReveal() {
 }
 initscrollReveal();
 
+// tableau de programme
 const tabs = document.querySelectorAll(".tab-btn");
 const panels = document.querySelectorAll(".tab-panel");
 
@@ -181,6 +185,7 @@ tabs.forEach(tab => {
     target.classList.add("active");
   });
 });
+
 // Flitre 
 
 function iniInterFilters() {
@@ -201,6 +206,7 @@ function iniInterFilters() {
   });
 }
 iniInterFilters();
+
 // validation
 function initFormValidation() {
   const form = document.querySelector("#registration-form");
@@ -211,7 +217,7 @@ function initFormValidation() {
     email: (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v.trim()) || "Merci d'indiquer une adresse e-mail valide.",
     phone: (v) => v.replace(/\D/g, "").length >= 9 || "Le numéro doit contenir au moins 9 chiffres.",
     participation: (v) => v !== "" || "Merci de choisir un type de participation.",
-   pays: (v) => v !== "" || "Merci de choisir votre pays.",
+    pays: (v) => v !== "" || "Merci de choisir votre pays.",
     message: (v) => v.trim().length >= 20 || "Votre message doit contenir au moins 20 caractères.",
   };
   function showFieldState(field, ok, message) {
@@ -223,23 +229,23 @@ function initFormValidation() {
   }
   function validateField(field) {
     const validator = validators[field.name];
-   if (!validator) return true ;
+    if (!validator) return true;
     const result = validator(field.value);
     const ok = result === true;
-    showFieldState(field, ok,ok ? "" : result);
-    return ok ;
+    showFieldState(field, ok, ok ? "" : result);
+    return ok;
   }
-Object.keys(validators).forEach((name) =>{
-  const field = form.elements.namedItem(name);
-  if(field) {
-    field.addEventListener("blur", () => validateField(field));
-    field.addEventListener("input", () => {
-      if(field.closest(".form-group").classList.contains("error"))
-        validateField(field);
-    });
-  }
-});
-form.addEventListener("submit", (e) => {
+  Object.keys(validators).forEach((name) => {
+    const field = form.elements.namedItem(name);
+    if (field) {
+      field.addEventListener("blur", () => validateField(field));
+      field.addEventListener("input", () => {
+        if (field.closest(".form-group").classList.contains("error"))
+          validateField(field);
+      });
+    }
+  });
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
     let allValid = true;
 
@@ -266,3 +272,7 @@ form.addEventListener("submit", (e) => {
   });
 }
 initFormValidation();
+// année dynamique dans le footer
+const year = new Date().getFullYear();
+document.getElementById("copyright").textContent =
+  "&copy;" + year + "  AfriConnect Summit  . Tous droits reserves."

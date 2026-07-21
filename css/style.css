@@ -40,7 +40,7 @@
 
 
 }
-
+/* variation de dark mode  */
 [data-theme="dark"] {
   --primary-color: #021120;
   --dark-color: #ffff;
@@ -50,7 +50,7 @@
   --white-color: #02294a;
 
 }
-
+/* body */
 body {
   font-family: var(--font-family-text);
   font-size: var(--font-size-text);
@@ -117,7 +117,7 @@ button {
   padding: var(--space-xs) var(--space-sm);
   cursor: pointer;
 }
-
+/* container pour les section */
 .container {
   width: 100%;
   max-width: var(--container-width);
@@ -129,7 +129,7 @@ section {
   padding: var(--space-xl) 0;
   position: relative;
 }
-
+/* navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -283,7 +283,7 @@ section {
 .navbar-toggoler.open span:nth-child(3) {
   transform: translateY(-6px) rotate(-45deg);
 }
-
+/* hero */
 
 .hero {
   min-height: 100vh;
@@ -358,6 +358,7 @@ section {
   gap: 2rem;
   flex-wrap: wrap;
 }
+/* bouton */
 
 .btn {
   display: inline-flex;
@@ -417,6 +418,7 @@ section {
     transform: translateY(0);
   }
 }
+/*  ticket*/
 
 .ticket {
   background: var(--white-color);
@@ -517,7 +519,7 @@ section {
 .ticket-bottom {
   padding: 0 1.8rem 1.8rem;
 }
-
+/* chiffres cles */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -553,6 +555,7 @@ section {
   margin-top: .3rem;
 }
 
+/* pourquoi participer */
 #pourquoi {
   background: radial-gradient(ellipse 70% 50% at 85% 15%, color-mix(in srgb, var(--tair-color) 50%, transparent), transparent 70%),
     radial-gradient(ellipse 55% 45% at 20% 90%, color-mix(in srgb, var(--secondary-color) 8%, transparent), transparent 70%),
@@ -599,6 +602,7 @@ section {
   margin-top: var(--space-sm);
 
 }
+/* intervenants */
 
 #inter {
   background: var(--colors);
@@ -672,6 +676,7 @@ section {
   text-align: center;
   margin-top: var(--space-lg);
 }
+/* sponsors */
 
 .sponsors-tier {
   margin-bottom: var(--space-md);
@@ -709,6 +714,7 @@ section {
   transform: translateY(-5px);
 }
 
+/* footer */
 .site-footer {
   background: var(--colors);
   border-top: 1px solid rgba(20, 35, 43, 0.12);
@@ -764,7 +770,7 @@ section {
 .footer-col ul li a:hover {
   color: var(--bouton-color);
 }
-
+/* bouton de retour */
 .back-to-top {
   position: fixed;
   bottom: 1.5rem;
@@ -785,7 +791,7 @@ section {
   opacity: 1;
   visibility: visible;
 }
-
+/* animation en javascript */
 .reveal {
   opacity: 0;
   transition: opacity 0.8s var(--ease);
@@ -800,14 +806,15 @@ section {
   opacity: 1;
   transform: translate(0, 0) scale(1);
 }
-
+/* page  hero  */
 
 .page-hero {
   text-align: center;
   padding: 9.5rem 0 4rem;
+  /* arriere plan en radial gradient  */
   background: radial-gradient(ellipse 55% 45% at 10% 90%, color-mix(in srgb, var(--secondary-color) 50%, transparent), transparent 70%),
     radial-gradient(ellipse 70% 50% at 85% 15%, color-mix(in srgb, var(--tair-color) 50%, transparent), transparent 70%),
-    var(--primary-color);
+    var(--primary-color);      
   border: 1px solid rgba(20, 35, 43, 0.12);
 
 }
@@ -830,7 +837,7 @@ section {
 .ban .sap {
   opacity: 0.5;
 }
-
+/* programme */
 .tabs {
   display: flex;
   gap: 0.8rem;
@@ -1005,7 +1012,7 @@ section {
 .inter-card.hidden-card {
   display: none;
 }
-
+/* contact */
 .contact-layout {
   display: flex;
   gap: var(--space-lg);
@@ -1134,7 +1141,7 @@ section {
   font-size: 1.3rem;
 }
 
-
+/* question  */
 .faq-list {
   display: flex;
   flex-direction: column;
@@ -1206,7 +1213,7 @@ section {
   margin: 0;
   color: var(--tair-color);
 }
-
+/* Affiche un contour visible autour du bouton  */
 .faq-check:focus-visible~.faq-trigger {
   outline: 2px solid var(--bouton-color);
   outline-offset: -2px;
@@ -1266,6 +1273,7 @@ section {
     width: 100%;
   }
 }
+/* tablette 900 */
 
 @media (max-width : 900px) {
   .container {
@@ -1313,7 +1321,7 @@ section {
   }
 
 }
-
+/* mobile 600 */
 @media (max-width : 600px) {
   .container {
     width: 100%;

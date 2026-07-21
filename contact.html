@@ -9,10 +9,12 @@
 </head>
 
 <body>
+    <!-- navbars -->
     <header class="">
         <nav class="navbar">
             <div class="container">
                 <a href="#" class="logo"><img src="images/logo.png" alt="">AfriConnectSummit</a>
+                <!-- lien -->
                 <div>
                     <ul class="nav-link" >
                         <li><a href="index.html">Accueil</a></li>
@@ -20,6 +22,7 @@
                         <li><a href="programme.html">Programme</a></li>
                         <li><a href="contact.html" class="active">Contact & Inscription</a></li>
                     </ul >
+                    <!-- bouton -->
                     <div class="nav-tools">
                         <button class="theme-toggle">
                             <i class="bi bi-sun"></i>
@@ -52,7 +55,8 @@
                     <i class="bi bi-check-circle-fill"></i>
                     <span>Merci ! Votre inscription a bien été envoyée. Un e-mail de confirmation va suivre.</span>
                 </div>
-                <form action="" id="registration-form">
+                <form  id="registration-form">
+                    <!-- champ de nom -->
                     <div class="form-row">
                         <div class="form-group full">
                             <label for="nom">Nom complet</label>
@@ -60,13 +64,14 @@
                             <span class="field-error"></span>
                         </div>
                     </div>
+                    <!-- champ d email -->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Adresse email</label>
                             <input type="email" name="email" id="email" placeholder="Entrez votre adresse email">
                             <span class="field-error"></span>
                         </div>
-
+                     <!-- telephone -->
                         <div class="form-group">
                             <label for="telephone">Téléphone</label>
                             <input type="tel" name="phone" id="telephone"
@@ -74,10 +79,11 @@
                             <span class="field-error"></span>
                         </div>
                     </div>
+                    <!-- participation -->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="pays">type de participation </label>
-                            <select name="participation" id="">
+                            <select name="participation" >
                                 <option value="">choisissez une option</option>
                                 <option value="visiteur">visiteur</option>
                                 <option value="exposant">exposant</option>
@@ -87,6 +93,7 @@
                             </select>
                             <span class="field-error"></span>
                         </div>
+                        <!-- pays -->
                         <div class="form-group">
                             <label for="pays">Pays</label>
                             <select name="pays" id="pays">
@@ -106,6 +113,7 @@
                             <span class="field-error"></span>
                         </div>
                     </div>
+                    <!-- massaga -->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="message">Message</label>
@@ -120,7 +128,7 @@
             <!-- NOS CONTACTS -->
             <div class="contact-info">
                 <div class="info-block">
-                    <h4>Lieu</h4>
+                    <h3>Lieu</h3>
                     <p>Kigali Convention Centre, Rwanda</p>
                 </div>
                 <div class="info-block">
@@ -130,11 +138,10 @@
                 </div>
                 <div class="info-block">
                     <h4>Contact</h4>
-                    <p><a href="mailto:info@aficonnectsummit.com">info@aficonnectsummit.com</a> <br> <a
-                            href="tel:+221 33 880 67 80">+221 33 880 67 80</a></p>
+                    <p><a href="">info@aficonnectsummit.com</a> <br> <a
+                            href="">+221 33 880 67 80</a></p>
                 </div>
             </div>
-        </div>
         </div>
     </section>
     <!-- FAQ EN ACCORDÉON CSS PUR -->
@@ -144,6 +151,7 @@
                 <p class="eyebrow">Questions fréquentes ?</p>
                 <h2>Tout ce qu'il faut savoir</h2>
             </div>
+            <!-- question 1 -->
             <div class="faq-list reveal">
                 <div class="faq-item">
                     <input type="checkbox" class="faq-check" id="feq1">
@@ -157,6 +165,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- question 2 -->
                 <div class="faq-item">
                     <input type="checkbox" class="faq-check" id="feq2">
                     <label for="feq2" class="faq-trigger"> <span> Ai-je besoin d'un visa pour participer à l'événement ?</span> <i
@@ -168,6 +177,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- question 3 -->
                 <div class="faq-item">
                     <input type="checkbox" class="faq-check" id="feq3">
                     <label for="feq3" class="faq-trigger">les sessions sont-elles traduites en français ? <i
@@ -179,6 +189,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- question 4 -->
                 <div class="faq-item">
                     <input type="checkbox" class="faq-check" id="feq4">
                     <label for="feq4" class="faq-trigger"> <span> Ai-je besoin d'un visa pour participer à l'événement ?</span> <i
@@ -190,6 +201,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- question 5 -->
                 <div class="faq-item">
                     <input type="checkbox" class="faq-check" id="feq5">
                     <label for="feq5" class="faq-trigger"> <span> Puis-j annuler ou modifier mon inscription ?</span> <i
@@ -222,12 +234,14 @@
             </div>
         </div>
     </section>
+    <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-cols">
                 <div class="footer-col">
                     <a href="#" class="logo"><img src="images/logo.png" alt="">AfriConnectSummit</a>
                     <p class="footer-tagline">le sommet tech pan-africain kigali Convention centre , Rwanda</p>
+                    <!-- ICON -->
                     <div class="footer-social">
                         <a href="#"><i class="bi bi-snapchat"></i></a>
                         <a href="#"><i class="bi bi-facebook"></i></a>
@@ -235,6 +249,7 @@
                         <a href="#"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
+                <!-- NAVIGATION -->
                 <div class="footer-col">
                     <h3>Navigation</h3>
                     <ul>
@@ -250,7 +265,7 @@
                         <li><i class="bi bi-envelope-at-fill"></i> <a
                                 href="mailto:info@aficonnectsummit.com">info@aficonnectsummit.com</a></li>
                         <li><i class="bi bi-telephone"></i>
-                            <a href="tel:+221 33 880 67 80">+221 33 880 67 80</a>
+                            <a href="">+221 33 880 67 80</a>
                         </li>
                         <li>Kigali Convention Centre, Rwanda</li>
                     </ul>
