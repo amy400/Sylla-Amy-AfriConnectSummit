@@ -1420,7 +1420,13 @@ section {
   .contact-form {
     padding: var(--space-md);
   }
-
+iframe{
+  width: 300px;
+  height: 200px;
+}
+.schedule-table{
+  width: 100%;
+}
 
 }
 
@@ -1466,6 +1472,17 @@ section {
   .section-head h2 {
     font-size: 20px;
   }
+  .schedule-table{
+  width: 70%;
+}
+
+.schedule-table thead th {
+  padding: .8rem .5rem;
+}
+
+.schedule-table tbody td {
+  padding:.8rem .5rem;
+}
 
 }
 
